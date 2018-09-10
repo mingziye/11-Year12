@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>2011</title>
+    <title>2011 dngts</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <script src='./data.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
     <style>
-        body { margin:2; padding:0; }
-        #map { position:absolute; top:0px; left:0px; bottom:0px; width:100%; }
+        body { margin:0; padding:0; }
+        #map { position: absolute; top:0px; left:0px; bottom:0px; width:100%; }
     </style>
 </head>
 <body>
@@ -35,30 +35,33 @@ map.on('load', function() {
         },
            'paint': {
                 'fill-extrusion-color' : {
-                    'property': '12t',
+                   'property': '12t',
                     "stops":[
-                        [0, '#B2DEE6'],
-                    	[20, '#9DC6CE'],
-                        [300, '#88B5BF'],
+                    	[0, '#B2DEE6'],
+                    	[112, '#9DC6CE'],
+                        [250, '#88B5BF'],
+                        [338,'#62929B'],
                         [436, '#3F7484'],
                         [635, '#2B687A'],
                         [1160, '#155A6F'],
                         [2428, '#044D64'],
-                        [4000, '#003A4B']
+                        [10000, '#003A4B']
+                    ]
                     
                 },
                 'fill-extrusion-height' : {
                     'property': '12_15_24',
                     "stops":[
                     	[0, 0],
-                    	[100, 2000],
-                        [200, 3000],
-                        [300, 4000],
-                        [800, 9000],
-                        [1000,12000]
+                    	[10, 1000],
+                        [20, 2000],
+                        [30, 3000],
+                        [50, 6000],
+                        [200,20000],
+                        [380,38000]
                     ]
                 },
-                 'fill-extrusion-opacity': 0.9
+                 'fill-extrusion-opacity': 1
             }
     });
 });
